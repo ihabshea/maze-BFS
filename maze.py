@@ -17,7 +17,7 @@ def find_path_bfs(maze,start,goal):
     visited = set()
     graph = mazeg(maze)
     while queue:
-        path, current = queue.pop()
+        path, current = queue.popleft()
         if current == goal:
             return path
         if current in visited:
